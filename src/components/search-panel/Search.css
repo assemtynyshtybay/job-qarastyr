@@ -1,0 +1,16 @@
+.S-logo{
+    height: 3vmin; 
+    /* color: rgba(225, 193, 193, 0.5); */
+
+  }
+  .container{
+    margin: 10% auto;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 5px;
+    background-color: antiquewhite;
+    border-radius: 18px;
+  }
+  
