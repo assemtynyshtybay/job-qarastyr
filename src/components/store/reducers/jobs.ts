@@ -1,4 +1,3 @@
-import { Action } from "history";
 import { Reducer } from "react";
 import { JobAction, JobActionType, JobState } from "../../types/jobsTypes";
 

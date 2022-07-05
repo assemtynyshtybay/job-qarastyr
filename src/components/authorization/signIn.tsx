@@ -13,10 +13,10 @@ import {
   InputLabel,
   ThemeProvider,
 } from '@mui/material';
-import { Login, Visibility, VisibilityOff } from '@mui/icons-material';
+import { Visibility, VisibilityOff } from '@mui/icons-material';
 import styled from '@emotion/styled';
 import style from '../../style/style';
-import { useForm, SubmitHandler } from 'react-hook-form';
+import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
 
 import * as yup from 'yup';

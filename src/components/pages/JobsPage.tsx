@@ -1,17 +1,14 @@
-import axios from 'axios';
 import { FC, useCallback } from 'react';
 import { useEffect } from 'react';
 import { JobItem } from '../job/JobItem';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { fetchJobs } from '../store/actions/jobActionCreator';
 import { useTypedSelector } from '../hooks/useTypedSelector';
 import {
   Container,
   FormControl,
   Grid,
-  Pagination,
-  Stack,
-  styled,
+  Pagination, 
   ThemeProvider,
 } from '@mui/material';
 import style from '../../style/style';

@@ -5,7 +5,6 @@ import {
   Container,
   FormControl,
   FormControlLabel,
-  FormGroup,
   FormLabel,
   InputLabel,
   MenuItem,
@@ -13,16 +12,15 @@ import {
   Radio,
   RadioGroup,
   Select,
-  SelectChangeEvent,
   styled,
   TextField,
   ThemeProvider,
   Typography,
 } from '@mui/material';
 import * as yup from 'yup';
-import { SubmitHandler, useForm } from 'react-hook-form';
+import { useForm } from 'react-hook-form';
 import style from '../../style/style';
-import { SetStateAction, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 init('OKXxmjNErUNHOPGT8');
 const Box = styled('div')`
@@ -55,14 +53,12 @@ const formValidation = yup.object().shape({
 const Profile = () => {
   const {
     register,
-    formState: { errors },
     handleSubmit,
   } = useForm({
     mode: 'onTouched',
     resolver: yupResolver(formValidation),
   });
   const params = useParams();
-  const [attempt, setAttempt] = useState(true);
   const [job, setJob] = useState({});
   const [univer, setUniver] = useState<string>('');
   const navigate = useNavigate();

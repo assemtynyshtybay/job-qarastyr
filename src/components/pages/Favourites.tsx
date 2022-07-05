@@ -1,4 +1,4 @@
-import { Container, Grid, styled } from '@mui/material';
+import { Grid, styled } from '@mui/material';
 import { FC, useEffect } from 'react';
 import { useTypedSelector } from '../hooks/useTypedSelector';
 import { JobItem } from '../job/JobItem';

@@ -1,6 +1,5 @@
 import axios from 'axios';
 import { Dispatch } from 'react';
-import { string } from 'yup';
 import { Job, JobActionType } from '../../types/jobsTypes';
  
 export const fetchJobs = ({page = 0, perPage= 9, search = ''}={}) =>(dispatch: Dispatch<any>) => {

@@ -1,4 +1,4 @@
-import { Button, Container, styled } from '@mui/material';
+import { Button, styled } from '@mui/material';
 import { FC, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Job, JobActionType } from '../types/jobsTypes';
@@ -23,7 +23,6 @@ const Box = styled('div')`
   border-radius: 20px;
   position: relative;
 
-  /* background: linear-gradient(180deg, rgba(29, 29, 29, 0) 0%, rgba(29, 29, 29, 0.8) 80.79%); */
 `;
 
 const Company = styled('div')`
@@ -36,11 +35,7 @@ const Company = styled('div')`
 const Title = styled('div')`
   font-weight: bold;
   font-size: x-large;
-`;
-
-// const Time= styled('div')`
-
-// `
+`; 
 const Description = styled('div')``;
 const Salary = styled('div')``;
 
@@ -56,7 +51,7 @@ export const JobItem: FC<Props> = ({ job }) => {
   const navigate = useNavigate();
   const handleLike = useCallback( ()=>{ 
     dispatch({type: JobActionType.ADD_FAVOUR, payload: job})
-  }, [dispatch])
+  }, [dispatch, job])
   return (
     <Box>
       <Company>

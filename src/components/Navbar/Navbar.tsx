@@ -3,7 +3,6 @@ import { AppBar, Box, Button, styled, Container, Toolbar, ThemeProvider } from '
 import { useNavigate } from 'react-router-dom';
 import logo from '../../assets/logo_jq.svg';
 import style from '../../style/style';
-import { Auth } from '../../context/Auth';
 
 const Img = styled('img')`
   padding: 5px;
@@ -18,7 +17,7 @@ export const Navbar: FC<Props> = ({ token, logout }) => {
     logout();
     localStorage.clear();
     navigate('sign-in');
-  }, []);
+  }, [logout, navigate]);
   return (
     <ThemeProvider theme={style}>
       <AppBar position="static" color="secondary">
@@ -78,6 +77,3 @@ export const Navbar: FC<Props> = ({ token, logout }) => {
     </ThemeProvider>
   );
 };
-function useContext(Auth: any): { token: any; login: any } {
-  throw new Error('Function not implemented.');
-}

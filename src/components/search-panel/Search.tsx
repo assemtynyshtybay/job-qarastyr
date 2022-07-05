@@ -1,6 +1,6 @@
 import { Button, FormControl, OutlinedInput, ThemeProvider } from '@mui/material';
 import { FC, useCallback, useState } from 'react';
-import { Navigate, useNavigate } from 'react-router';
+import { useNavigate } from 'react-router';
 import search from '../../assets/search-svgrepo-com.svg';
 import style from '../../style/style';
 import './Search.css';
@@ -19,7 +19,7 @@ export const Search: FC<Props> = ({ getSearchPanelData, token }) => {
     } else {
       navigate('/sign-up');
     }
-  }, [searchF, token]);
+  }, [searchF, token, getSearchPanelData, navigate]);
   return (
     <ThemeProvider theme={style}>
       <div className="container">
