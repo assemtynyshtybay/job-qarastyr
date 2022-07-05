@@ -1,7 +1,7 @@
 {
   "name": "my-jq",
   "version": "0.1.0",
-  "homepage": "https://altynmoon.github.io/my-jq/",
+  "homepage": "https://job-qarastyr-app.vercel.app/",
   "private": true,
   "dependencies": {
     "-": "^0.0.1",
